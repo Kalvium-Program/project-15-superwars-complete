@@ -225,6 +225,7 @@ describe("Setting up Super War", function () {
      superWar.players[1].strength = 0;
      superWar.announceWinner = jasmine.createSpy("announceWinner");
      superWar.fight()
+
      let fragment = document.getElementById('score');
 
      expect(isElement(fragment)).toBeTrue();
@@ -234,8 +235,17 @@ describe("Setting up Super War", function () {
     it("should return clash when there is a fight\
     ",function(){
       superWar.players.map(player => player.selected = true);
+      strength=9;
   
-      expect(superWar.isFight()).toBe('clash');
+      expect(superWar.isFight(strength)).toBe('clash');
+    });
+// added another test case
+    it("should return peace when there is no fight\
+    ",function(){
+      superWar.players.map(player => player.selected = true);
+      strength=0;
+  
+      expect(superWar.isFight(strength)).toBe('peace');
     });
 
     it("should return total score of the\
@@ -253,6 +263,21 @@ describe("Setting up Super War", function () {
      superWar.players[1].strength = 0;
 
      expect(superWar.checkWin()).toBe('hero');
+    });
+// added another test case
+    it("should return villain when hero total\
+    score reaches zero",function(){
+     superWar.players[1].strength = 100;
+
+     expect(superWar.checkWin()).toBe('villain');
+    });
+// added another test case
+    it("should return endure when villains and hero total\
+    score are equal",function(){
+     superWar.players[1].strength = 0;
+     superWar.players[0].strength = 0;
+
+     expect(superWar.checkWin()).toBe('endure');
     });
 
     it("should return total strength\
