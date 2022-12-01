@@ -2,11 +2,11 @@
 
 # Kalvium Lab | Superwars Stage 5
 
-Dustin and Lucus are best friends. They spend their weekends watching superhero series and playing superhero games. One Friday at school Mr.Hooper, their computer science faculty taught them HTML, CSS, and JavaScript. Dustin & Lucus realised they could build super cool super hero stuff using their knowledge. 
+Dustin and Lucus are best friends. They spend their weekends watching superhero series and playing superhero games. One Friday at school Mr.Hooper, their computer science faculty taught them HTML, CSS, and JavaScript. Dustin & Lucus realised they could build super cool super hero stuff using their knowledge.
 
 The subsequent weekend, they decided to do it. Lucus and Dustin are now all set to build something super cool.
 
-Lucus always loves protagonists like most of us. But Dustin is quite crazy, he likes antagonists. So they decided to collect a bunch of their favorite Super Heroes and Super Villains names along with their pictures. Did they tell you about the game that they are gonna build? 
+Lucus always loves protagonists like most of us. But Dustin is quite crazy, he likes antagonists. So they decided to collect a bunch of their favorite Super Heroes and Super Villains names along with their pictures. Did they tell you about the game that they are gonna build?
 
 Okay, let us explain. They are going to facilitate the ultimate war between Super Heroes and Super Villains. As they are new to these technologies, they need a **you** to help them build this game.
 
@@ -32,7 +32,7 @@ The `src/app.js` contains an array of 20 Super Heroes and Super-Villains. We are
 
 ### Progression 1: Clash of clans
 
-Brace yourself ! We are in the last legs. Help Dustin and Lucus by completing the logic of `isFight()` method such that it should _return `clash`_ when it satisfies the constraint. Otherwise it should _return `peace`_. The given constraint is that a Super Hero and Super Villain with strength greater than zero should be there to make a clash.
+Brace yourself ! We are in the last legs. Help Dustin and Lucus by completing the logic of `isFight()` method such that it should _return `clash`_ when it satisfies the constraint. Otherwise it should _return `peace`_. The given constraint is that a Super Hero and Super Villain with strength greater than zero should be there to make a clash. `strength` is the parameter that will be passed to. `isFight()` function.
 
 ### Progression 2: Consistency afford refuge
 
@@ -40,7 +40,7 @@ Dustin and Lucus want to display the scores of the teams. So to display the scor
 
 ### Progression 3: Winner winner chicken dinner
 
-Check whether there is a winner by adding your logic to `checkWin()` method. If winner exists then based on the players type _return `hero`_ or _return `villain`_. If winner dosen't exists then _return `endure`_.
+Check whether there is a winner by adding your logic to `checkWin()` method. A winner is decided based upon it's strength. If the strength of hero > strength of the villain, then hero wins.; otherwise Villain. (You can get the strength of the hero and villain from `totalStrength()` ) If winner exists then based on the players type _return `hero`_ or _return `villain`_. If winner dosen't exists then _return `endure`_.
 
 ### Progression 4: Unity is strength
 
